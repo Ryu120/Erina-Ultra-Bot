@@ -79,7 +79,7 @@ async def ids(_,message):
     await message.reply(f"**Your ID**: `{message.from_user.id}`\n**{message.chat.title}'s ID**: `{message.chat.id}`")
 
 
-@bot.on_message(filters command("mediaid"))
+@bot.on_message(filters.command("mediaid"))
 async def _mediaid(_, message):
   m = message.reply_to_message
   if not m:
