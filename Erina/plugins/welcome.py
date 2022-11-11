@@ -1,5 +1,5 @@
 import pymongo
-from Erina import MONGO_URI as db_url, bot, OWNER_ID, OWNER_ID2
+from Erina import MONGO_URI as db_url, bot
 from pyrogram import filters
 from datetime import datetime, date, time 
 import re
@@ -8,6 +8,8 @@ from Erina.helper_functions.cust_p_filters import admin_fliter
 
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)]\(buttonurl:/{0,2}(.+?)(:same)?\))")
 
+OWNER_ID = [5553411428]
+OWNER_ID2 = [5544740697]
 
 welcome_db = pymongo.MongoClient(db_url).erina.welcome
 
