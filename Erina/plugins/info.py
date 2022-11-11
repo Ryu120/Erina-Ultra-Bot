@@ -1,4 +1,4 @@
-from Erina import bot, OWNER_ID, OWNER_ID2
+from Erina import bot
 from pyrogram import filters
 from ..utils.func import *
 import os
@@ -11,6 +11,9 @@ def parse_com(com, key):
     return None
   r = (r.split(" ", 1)[1] if len(r.split()) >= 1 else None)
   return r
+
+OWNER_ID = [5553411428]
+OWNER_ID2 = [5544740697]
 
 @bot.on_message(filters.command("info"))
 async def info(bot, message):
