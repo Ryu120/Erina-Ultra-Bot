@@ -42,8 +42,6 @@ async def info(bot, message):
 **|-EMPEROR:** {dta.id in OWNER_ID}
 **|-MONARCH:** {dta.id in OWNER_ID2}
 """
-  if is_gban:
-    data += f"\n\n**|-Gban Reason**: {is_gban['reason']}"
   if dta.photo:
     pic = await bot.download_media(dta.photo.big_file_id)
     kk = await message.reply_text(text="`Analyzing The User`")
