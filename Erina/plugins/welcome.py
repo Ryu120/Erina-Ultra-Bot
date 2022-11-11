@@ -100,7 +100,7 @@ async def setwelcome(_,message):
 
 
 @bot.on_message(filters.command("clearwelcome"))
-async def clearwelcome(_,message):
+def clearwelcome(_,message):
   admins = await bot.get_chat_members(message.chat.id, filter="administrators")
   if not message.from_user.id in (admins + OWNER_ID + OWNER_ID2):
     return await message.reply_text("Become an admin first lol")
