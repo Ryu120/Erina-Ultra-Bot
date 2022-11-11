@@ -101,12 +101,12 @@ async def setwelcome(_,message):
 
 @bot.on_message(filters.command("clearwelcome"))
 def clearwelcome(_,message):
-  admins = await bot.get_chat_members(message.chat.id, filter="administrators")
+  admins = bot.get_chat_members(message.chat.id, filter="administrators")
   if not message.from_user.id in (admins + OWNER_ID + OWNER_ID2):
-    return await message.reply_text("Become an admin first lol")
+    return message.reply_text("Become an admin first lol")
   else:
     welcome_db.delete_one({"chat": message.chat.id})
-    return await message.reply("Successfully Cleared Welcome")
+    return message.reply("Successfully Cleared Welcome")
   
  
 
