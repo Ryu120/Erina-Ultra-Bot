@@ -106,7 +106,7 @@ async def active_afk(_, message: Message):
                 f"**{message.from_user.first_name}** is back online",
                 disable_web_page_preview=True,
             )
-        await put_cleanmode(message.chat.id, send.message.id)
+        await put_cleanmode(message.chat.id, send_message.id)
         return
     if len(message.command) == 1 and not message.reply_to_message:
         details = {
