@@ -10,7 +10,7 @@
 #
 
 
-from Erin import db
+from Erina import db
 
 usersdb = db.users
 
