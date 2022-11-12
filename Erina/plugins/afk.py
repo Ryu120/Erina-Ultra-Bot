@@ -16,7 +16,6 @@ from pyrogram.types import Message
 
 from Erina import bot as app
 from Erina.Database import add_afk, is_afk, remove_afk
-from Erina.helpers import put_cleanmode
 
 from typing import Union
 from datetime import datetime, timedelta
