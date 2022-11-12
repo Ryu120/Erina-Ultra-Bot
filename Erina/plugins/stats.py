@@ -6,7 +6,7 @@ from Erina import bot as Client
 
 @Client.on_message(filters.command(["stats"]))
 async def stats(client: Client, message: Message):
-    await message.edit_text("Collecting stats")
+    await message.reply_text("Collecting stats")
     start = datetime.now()
     u = 0
     g = 0
