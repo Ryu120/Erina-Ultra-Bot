@@ -34,7 +34,7 @@ async def info(bot, message):
 
 **|-First Name** : {dta.first_name}
 **|-Last Name**: {dta.last_name}
-**|-ID:** {dta.id}
+**|-ID:** `{dta.id}`
 **|-DC:** {dta.dc_id}
 **|-Username:** @{dta.username}
 **|-PermaLink**: {dta.mention}
@@ -49,7 +49,7 @@ async def info(bot, message):
     mm = await kk.edit_text("`...`")
     await asyncio.sleep(2)
     ll = await mm.edit_text("`Processing...`")
-    await asyncio.sleep(3)
+    await asyncio.sleep(1)
     await ll.delete()
     await message.reply_photo(photo=pic, caption=data)
     os.remove(pic)
